@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var socialLinks = document.querySelector(".footer-col h4");
         var copyright = document.querySelector("#copyright");
         var chooseLanguage = document.querySelector("#jezykLabel");
+        var Polish = document.querySelector("#polish");
+        var English = document.querySelector("#english");
 
         var TeamName = document.querySelector("#TeamName");
         var Points = document.querySelector("#Points");
@@ -46,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var wyslij = document.querySelector('.containerForm input[type="submit"]');
         var intro = document.querySelector("#introduce h1");
 
-
+        var mainPage = document.querySelector("#mainWebsite");
+        var gallery = document.querySelector("#galeryText");
+        var latestMatches = document.querySelector("#latestMatches");
 
 
 
@@ -94,6 +98,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }catch{
 
             }
+            English.textContent = "English";
+            Polish.textContent = "Polish";
+
+            mainPage.textContent = "Main Page";
+            gallery.textContent = "Gallery";
+            latestMatches.textContent = "Latest Matches";
 
             socialLinks.textContent = "Follow me";
             copyright.textContent = "© 2023 Premier League. All rights reserved.";
@@ -141,6 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }catch{
 
             }
+            Polish.textContent = "Polski";
+            English.textContent = "Angielski";
+
+            mainPage.textContent = "Strona Główna";
+            gallery.textContent = "Galeria";
+            latestMatches.textContent = "Najbliższe mecze";
 
 
             footerCol2.textContent = "Początek strony";
