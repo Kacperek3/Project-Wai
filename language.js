@@ -1,4 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    var label = document.createElement('label');
+    label.setAttribute('for', 'jezyk');
+    label.setAttribute('id', 'jezykLabel');
+    label.textContent = 'Język: ';
+
+    // Tworzenie selects
+    var select = document.createElement('select');
+    select.setAttribute('id', 'jezyk');
+    select.setAttribute('name', 'jezyk');
+
+    // Tworzenie opcji dla select
+    var option1 = document.createElement('option');
+    option1.setAttribute('value', 'Polski');
+    option1.setAttribute('id', 'polish');
+    option1.textContent = 'Polski';
+
+    var option2 = document.createElement('option');
+    option2.setAttribute('value', 'Angielski');
+    option2.setAttribute('id', 'english');
+    option2.textContent = 'Angielski';
+
+    // Dodawanie opcji do select
+    select.appendChild(option1);
+    select.appendChild(option2);
+
+    // Znajdowanie miejsca, gdzie chcemy dodać te elementy (np. <div id="footer-col3">)
+    var container = document.querySelector('.footer-col3');
+
+    // Dodawanie wszystkich utworzonych elementów do drzewa dokumentu
+    container.appendChild(label);
+    container.appendChild(select);
+
     var select = document.getElementById("jezyk");
     select.addEventListener("change", changeLanguage);
 
