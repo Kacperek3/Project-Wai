@@ -88,6 +88,10 @@
     font-size: 40px;
     margin-right: 4%;
 }
+.customRadio:hover{
+    cursor: pointer;
+}
+
 #kobietaLabel {
     color: white;
     font-size: 40px;
@@ -138,8 +142,8 @@
     border-color: #3498db;
 }
 
-.Text::placeholder {
-    color: #999;
+.Text:hover {
+    border-color: #3498db;
 }
 
 .customRadio {
@@ -155,14 +159,23 @@
 }
 
 .finalsButtons{
+    font-family: 'Poppins', sans-serif;
     height: 50px;
     width: 200px;
-    border-radius: 15px;
-    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgb(1, 170, 170);
+    font-weight:bold;
+    font-size: large;
+    color: white;
+    border: 3px solid #f3f3f3;
+    transition-duration: 0.1s;
+    margin: 10px;
 }
 
 .finalsButtons:hover{
-    border-color: #3498db;
+    border-color: #4da4df;
+    transform: scale(1.05);
 }
 
 @media (max-width: 1000px) {
@@ -195,9 +208,16 @@
         font-size: 35px;
         margin-right: 4%;
     }
+
     .customRadio {
         width: 25px; 
         height: 25px;
     }
 
+}
+
+@media (max-width: 700px) {
+    #wyksztalcenieLabel{
+        display: block;
+    }
 }

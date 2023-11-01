@@ -23,16 +23,17 @@ body {
     background-color: darkcyan;
 }
 
+
+
 #logo_Premier_League {
     position: absolute;
-    top: 10%; 
-    left: 38%;
-    transform: translate(-50%, -50%); 
-    max-width: 25%;
-    animation-name: logo;
-    animation-duration: 4s;
-    animation-fill-mode: both;
+    left: 40%; top: 30%;
+    color: white;
+    width: 350px;
+    height: 350px;
 }
+
+
 
 video {
     width: 100%;
@@ -280,4 +281,19 @@ video {
     .aboutHobby{
         margin-top: 15%;
     }
+
+    #logo_Premier_League {
+        left: 30%; top: 30%;
+    }
 }  
+
+@media (max-width: 650px) {
+    #logo_Premier_League {
+        left: 20%; top: 30%;
+    }
+}
+@media (max-width: 600px) {
+    #logo_Premier_League {
+        left: 15%; top: 30%;
+    }
+}
