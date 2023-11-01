@@ -197,8 +197,6 @@ document.addEventListener("DOMContentLoaded", function () {
             socialLinks.textContent = "Zaobserwuj mnie";
             copyright.textContent = "© 2023 Premier League. Wszelkie prawa zastrzeżone.";
             chooseLanguage.textContent = "Język:"
-
-            
         }   
     }
 });

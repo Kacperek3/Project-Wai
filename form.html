@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="language.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="jqueryUI.js"></script>
+    
 </head>
 <body>
     <header class="header">
@@ -51,51 +56,56 @@
             <form action="odbierz.php" class="forms" method="post">
                 
                 <div class="containerForm">
-                    <label for="imie" id = "imieLabel">Imię:</label>
-                    <input type="text" class ="Text" name="imie" required><br>
-                </div>
-
-                <div class="containerForm">
-                    <label for="nazwisko" id = "nazwiskoLabel">Nazwisko:</label>
-                    <input type="text" class ="Text" name="nazwisko" required><br>
-                </div>
-
-                <div class="containerForm">
-                    <label for="email" id = "emailLabel">Email:</label>
-                    <input type="email" class="Text" name="email" required><br>
+                    <label for="imie" id="imieLabel">Imię:</label>
+                    <input type="text" id="imie" class="Text" name="imie" required><br>
                 </div>
                 
                 <div class="containerForm">
-                    <label for="miasto" id = "miastoLabel">Miasto:</label>
-                    <input type="text" class="Text" name="miasto" required><br>
+                    <label for="nazwisko" id="nazwiskoLabel">Nazwisko:</label>
+                    <input type="text" id="nazwisko" class="Text" name="nazwisko" required><br>
                 </div>
-
+                
                 <div class="containerForm">
-                    <input type="radio" class="customRadio" name="plec" value="Mężczyzna">
-                    <label for="mezczyzna" id = "mezczyznaLabel">Mężczyzna</label>
-                    <input type="radio" class="customRadio" name="plec" value="Kobieta">
-                    <label for="kobieta" id = "kobietaLabel">Kobieta</label><br>
+                    <label for="email" id="emailLabel">Email:</label>
+                    <input type="email" id="email" class="Text" name="email" required autocomplete="email"><br>
                 </div>
-
+                
+                <div class="containerForm">
+                    <label for="miasto" id="miastoLabel">Miasto:</label>
+                    <input type="text" id="miasto" class="Text" name="miasto" required><br>
+                </div>
+                
+                <div class="containerForm">
+                    <input type="radio" class="customRadio" id="mezczyzna" name="plec" value="Mężczyzna">
+                    <label for="mezczyzna" id="mezczyznaLabel">Mężczyzna</label>
+                    <input type="radio" class="customRadio" id="kobieta" name="plec" value="Kobieta">
+                    <label for="kobieta" id="kobietaLabel">Kobieta</label><br>
+                </div>
+                
                 <div class="containerForm">
                     <label for="wyksztalcenie" id="wyksztalcenieLabel">Wykształcenie: </label>
                     <select id="wyksztalcenie" name="wyksztalcenie">
-                    <option value="podstawowe" id="podstawowe">Podstawowe</option>
-                    <option value="średnie" id="srednie">Średnie</option>
-                    <option value="wyższe" id ="wyzsze">Wyższe</option>
+                        <option value="podstawowe" id="podstawowe">Podstawowe</option>
+                        <option value="średnie" id="srednie">Średnie</option>
+                        <option value="wyższe" id="wyzsze">Wyższe</option>
                     </select><br>
                 </div>
-
+                
                 <div class="containerForm">
-                    <label for="uwagi" id = "uwagiLabel">Uwagi:</label>
+                    <label for="uwagi" id="uwagiLabel">Uwagi:</label>
                     <textarea id="uwagi" name="uwagi" rows="4" cols="50"></textarea><br>
-                </div>
+                </div>                
 
                 <div class="containerForm">
                     <input type="reset" value="Wyczyść" class="finalsButtons">
                     <input type="submit" value="Wyślij" class="finalsButtons">
                 </div>
-
+                <div id="dialogENG" title="Validation Error">
+                    Please fill in all the required fields.
+                </div>
+                <div id="dialogPL" title="Błąd">
+                    Proszę uzupełnij każde wymagane Pole.
+                </div>
             </form>
         </div>
     </div>
@@ -121,5 +131,6 @@
             &copy; 2023 Premier League. Wszelkie prawa zastrzeżone.
         </div>
     </footer>
+    
 </body>
 </html>
