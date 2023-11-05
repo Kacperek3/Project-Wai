@@ -229,32 +229,9 @@ video {
     color: white;
     margin-right: 5px;
 }
-
-
-
 @media (max-width: 1400px) {
     .menu{
         position: relative;
-    }
-    .middle{
-        display: flex;
-        flex-direction: column;
-    }
-    .table{
-        width: 100vw;
-        margin-left: 0px;
-        justify-content: center;
-        text-align: center;
-    }
-    .footballTable{ 
-        margin: 0 auto;
-    }
-
-    .colMiddle{
-        margin-left: 5vw;
-        margin-right: 5vw;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
     }
     .con{
         flex-direction: column;
@@ -262,8 +239,7 @@ video {
     .conMargin{
         margin-top: 20px;
     }
-    
-}  
+}
 
 @media (max-width: 800px) {
     .container{

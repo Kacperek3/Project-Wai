@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
             try{
-                name.textContent = "Imie:";
+                name.textContent = "Imię:";
                 nazwisko.textContent = "Nazwisko:";
                 miasto.textContent = "Miasto:";
                 mezczyzna.textContent = "Mężczyzna:";

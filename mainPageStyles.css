@@ -28,7 +28,6 @@
 .footballTable{
     border-collapse: collapse;
     font-size: 0.9em;
-    min-width: 400px;
 }
 
 .footballTable thead tr{
@@ -79,3 +78,28 @@
     border-bottom: 3px solid white;
     width: 100%;
 }
+
+@media (max-width: 1400px) {
+    .middle{
+        display: flex;
+        flex-direction: column;
+    }
+    .table{
+        width: 100%;
+        margin-left: 0px;
+        margin-left: 0%;
+        margin-right: 0%;
+        justify-content: center;
+        text-align: center;
+    }
+    .footballTable{ 
+        margin: 5px auto;
+    }
+
+    .colMiddle{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+}  
