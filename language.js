@@ -5,12 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     label.setAttribute('id', 'jezykLabel');
     label.textContent = 'Język: ';
 
-    // Tworzenie selects
     var select = document.createElement('select');
     select.setAttribute('id', 'jezyk');
     select.setAttribute('name', 'jezyk');
 
-    // Tworzenie opcji dla select
     var option1 = document.createElement('option');
     option1.setAttribute('value', 'Polski');
     option1.setAttribute('id', 'polish');
@@ -21,25 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
     option2.setAttribute('id', 'english');
     option2.textContent = 'Angielski';
 
-    // Dodawanie opcji do select
     select.appendChild(option1);
     select.appendChild(option2);
 
-    // Znajdowanie miejsca, gdzie chcemy dodać te elementy (np. <div id="footer-col3">)
     var container = document.querySelector('.footer-col3');
 
-    // Dodawanie wszystkich utworzonych elementów do drzewa dokumentu
     container.appendChild(label);
     container.appendChild(select);
 
     var select = document.getElementById("jezyk");
     select.addEventListener("change", changeLanguage);
 
-    // Sprawdź, czy wybór języka jest już zapisany w localStorage
     var selectedLanguage = localStorage.getItem("selectedLanguage");
     if (selectedLanguage) {
         select.value = selectedLanguage;
-        changeLanguage(); // Wywołaj funkcję po załadowaniu strony, aby ustawić tekst na stronie na zapisany język
+        changeLanguage();
     }
 
     function changeLanguage() {
@@ -88,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         selectedLanguage = select.value;
-        localStorage.setItem("selectedLanguage", selectedLanguage); // Zapisz wybór języka w localStorage
+        localStorage.setItem("selectedLanguage", selectedLanguage);
 
         if (selectedLanguage === "Angielski") {
             footerCol2.textContent = "Top of page";

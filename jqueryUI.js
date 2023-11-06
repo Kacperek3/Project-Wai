@@ -32,7 +32,6 @@ $(document).ready(function () {
         }
     });
 
-
     var availableCities = [
         "Warszawa", "Kraków", "Łódź", "Wrocław", "Poznań", "Gdańsk", 
         "Szczecin", "Bydgoszcz", "Lublin", "Białystok", "Katowice", 
@@ -49,15 +48,17 @@ $(document).ready(function () {
     $("#miasto").autocomplete({
         source: function (request, response) {
             var term = request.term.toLowerCase();
+            var length = term.length;
             var matches = [];
             for (var i = 0; i < availableCities.length; i++) {
-                if (availableCities[i].toLowerCase().indexOf(term) === 0) {
+                if (availableCities[i].toLowerCase().slice(0, length) === term) {
                     matches.push(availableCities[i]);
                 }
             }
             response(matches);
         }
     });
+    
     
 
 });

@@ -1,8 +1,7 @@
-body, h1, h2, h3, p, ul, li {
+h1, h2, h3 {
     margin: 0;
     padding: 0;
 }
-
 
 ul {
     list-style: none;
@@ -12,6 +11,7 @@ ul {
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: darkcyan;
 }
@@ -20,10 +20,7 @@ body {
     position: relative;
     width: 100%; 
     height: 650px;
-    background-color: darkcyan;
 }
-
-
 
 #logo_Premier_League {
     position: absolute;
@@ -31,9 +28,8 @@ body {
     color: white;
     width: 350px;
     height: 350px;
+    animation: logo 4s;
 }
-
-
 
 video {
     width: 100%;
@@ -53,19 +49,15 @@ video {
     justify-content: center;
     padding-top: 1%;
     padding-bottom: 2%;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: darkcyan;
     border-bottom: 4px solid rgb(187, 176, 176);
-    z-index: 100;
 }
-
 
 .top-menu {
     display: flex;
     align-items: center;
-    list-style: none;
     padding: 0;
 }
 
@@ -86,11 +78,10 @@ video {
     width: 0;
     height: 3px;
     background-color: #fff;
-    transition:all .3s;
+    transition: all .3s;
 }
 
 .top-menu a:first-child {
-    font-family: 'Poppins', sans-serif;
     margin-left: 0;
 }
 
@@ -102,7 +93,6 @@ video {
     position: relative;
     display: inline-block;
 }
-
 
 .dropdown {
     position: absolute;
@@ -253,11 +243,7 @@ video {
         margin-top: 5%;
         margin-bottom: 5%;
     }
-
-    .aboutHobby{
-        margin-top: 15%;
-    }
-
+    
     #logo_Premier_League {
         left: 30%; top: 30%;
     }
